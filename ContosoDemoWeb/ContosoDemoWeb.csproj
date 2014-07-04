@@ -177,8 +177,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Properties\WebJobs.xml" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Properties\ligershark.webjobs.targets" />
+    <Content Include="Properties\ligershark.webjobs.ext.targets" />
     <None Include="Properties\PublishProfiles\ContosoDemoWeb.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -222,6 +225,7 @@
     <Content Include="Views\Account\ResetPassword.cshtml" />
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="webjobs.wpp.targets" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -237,6 +241,10 @@
     <ProjectReference Include="..\Models.Library\Models.Library.csproj">
       <Project>{872bd16e-a9a8-4e9d-b068-97a6b09466c2}</Project>
       <Name>Models.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PictureLoader.WebJob\PictureLoader.WebJob.csproj">
+      <Project>{6783A3C0-8C50-471D-9536-8F7DAF2E815E}</Project>
+      <Name>PictureLoader.WebJob</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
