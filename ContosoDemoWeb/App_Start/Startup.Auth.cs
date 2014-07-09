@@ -38,9 +38,9 @@ namespace ContosoDemoWeb
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
 
             // Uncomment the following lines to enable logging in with third party login providers
-            //app.UseMicrosoftAccountAuthentication(
-            //    clientId: "",
-            //    clientSecret: "");
+            app.UseMicrosoftAccountAuthentication(
+                clientId: System.Configuration.ConfigurationManager.AppSettings["MSFTClientID"],
+                clientSecret: System.Configuration.ConfigurationManager.AppSettings["MSFTClientSecret"]);
 
             //app.UseTwitterAuthentication(
             //   consumerKey: "",
@@ -50,11 +50,11 @@ namespace ContosoDemoWeb
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = System.Configuration.ConfigurationManager.AppSettings["GoogleClientID"],
+                ClientSecret = System.Configuration.ConfigurationManager.AppSettings["GoogleClientSecret"]
+            });
         }
     }
 }
